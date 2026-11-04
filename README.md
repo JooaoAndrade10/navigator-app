@@ -1,56 +1,105 @@
-# Welcome to your Expo app 👋
+# 🧭 Navigator
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**Aplicativo de navegação urbana em desenvolvimento.**
 
-## Get started
+O Navigator é um projeto pessoal de desenvolvimento de software inspirado em aplicativos de navegação como o Waze.
 
-1. Install dependencies
+Seu objetivo é explorar tecnologias de geolocalização, mapas e integração entre aplicações mobile e serviços de backend.
 
-   ```bash
-   npm install
-   ```
+O projeto está sendo desenvolvido como parte do meu aprendizado em Análise e Desenvolvimento de Sistemas e da construção do meu portfólio profissional.
 
-2. Start the app
+## 🎯 Objetivo do projeto
 
-   ```bash
-   npx expo start
-   ```
+Desenvolver uma aplicação de navegação intuitiva que permita aos usuários pesquisar destinos e visualizar informações geográficas, com possibilidade de incorporar recursos de trânsito em versões futuras.
 
-In the output, you'll find options to open the app in a
+## 🛠️ Tecnologias utilizadas
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- **React Native:** desenvolvimento da aplicação mobile.
+- **Expo:** ambiente de desenvolvimento.
+- **Expo Router:** gerenciamento de navegação entre telas.
+- **TypeScript:** tipagem e organização do código.
+- **react-native-maps:** exibição de mapas na aplicação.
+- **Node.js:** ambiente de execução do backend.
+- **Express:** criação das rotas da API.
+- **OpenStreetMap:** dados geográficos e mapas.
+- **Nominatim:** serviço de pesquisa de endereços.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## ✅ Funcionalidades implementadas
 
-## Get a fresh project
+- Exibição de mapa com ruas e informações geográficas reais.
+- Interface inicial de navegação.
+- Estrutura inicial de backend com Node.js e Express.
+- API para pesquisa de endereços utilizando o Nominatim.
 
-When you're ready, run:
+## 🚧 Próximas etapas
+
+- Integrar a pesquisa de destinos à interface mobile.
+- Exibir e aperfeiçoar marcadores de localização no mapa.
+- Implementar cálculo e visualização de rotas.
+- Explorar integração com informações de trânsito.
+- Melhorar a experiência e a interface do usuário.
+
+## 🚀 Como executar o projeto
+
+### Pré-requisitos
+
+Antes de começar, é necessário ter instalado:
+
+- [Node.js](https://nodejs.org/)
+- npm (instalado junto com o Node.js)
+
+### 1. Baixar as dependências
+
+Na pasta principal do projeto, abra o terminal e execute:
 
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. Iniciar o aplicativo
 
-### Other setup steps
+Execute:
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+```bash
+npx expo start
+```
 
-## Learn more
+Após iniciar o servidor, o Expo disponibilizará opções para executar o aplicativo em diferentes ambientes:
 
-To learn more about developing your project with Expo, look at the following resources:
+- [Expo Go](https://expo.dev/go)
+- [Emulador Android](https://docs.expo.dev/workflow/android-studio-emulator/)
+- [Simulador iOS](https://docs.expo.dev/workflow/ios-simulator/)
+- [Build de desenvolvimento](https://docs.expo.dev/develop/development-builds/introduction/)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### 3. Iniciar o backend
 
-## Join the community
+O Navigator também possui um servidor desenvolvido com Node.js e Express.
 
-Join our community of developers creating universal apps.
+Para iniciá-lo, abra outro terminal na pasta principal do projeto e execute:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+node server.cjs
+```
+
+O servidor utiliza a porta 3000 por padrão.
+
+## 📚 Documentação e referências
+
+- [Documentação oficial do Expo](https://docs.expo.dev/)
+- [Tutorial do Expo](https://docs.expo.dev/tutorial/introduction/)
+- [Documentação do React Native](https://reactnative.dev/docs/getting-started)
+- [Documentação do Expo Router](https://docs.expo.dev/router/introduction/)
+- [Documentação do OpenStreetMap](https://www.openstreetmap.org/about)
+- [Documentação do Nominatim](https://nominatim.org/release-docs/latest/)
+
+## 📌 Status do projeto
+
+**Em desenvolvimento.**
+
+O Navigator está em constante evolução. Novas funcionalidades estão sendo planejadas e implementadas gradualmente, conforme o avanço do desenvolvimento e dos estudos.
+
+---
+
+Desenvolvido como projeto pessoal de aprendizado e portfólio.
+
+Dados cartográficos: © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright).
