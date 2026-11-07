@@ -44,3 +44,11 @@ example
 
 # Backups locais do Navigator
 *backup*.tsx
+
+# Backups com extensão .bak
+*.tsx.bak
+
+# Exportações temporárias
+.expo-check/
+
+.env.local

@@ -51,7 +51,7 @@ router.get('/', async (req, res) => {
     const url = new URL(NOMINATIM_URL);
 
     url.searchParams.set('format', 'jsonv2');
-    url.searchParams.set('limit', '1');
+    url.searchParams.set('limit', '5');
     url.searchParams.set('q', query);
 
     const contactEmail =
@@ -84,13 +84,28 @@ router.get('/', async (req, res) => {
       });
     }
 
-    const results = await response.json();
+      const results = await response.json();
 
-    const data = results.map((item) => ({
-      lat: item.lat,
-      lon: item.lon,
-      display_name: item.display_name,
-    }));
+    const seenLocations = new Set();
+
+    const data = results
+      .map((item) => ({
+        lat: item.lat,
+        lon: item.lon,
+        display_name: item.display_name,
+      }))
+      .filter((item) => {
+        const key = `${item.lat}|${item.lon}|${item.display_name
+          .trim()
+          .toLowerCase()}`;
+
+        if (seenLocations.has(key)) {
+          return false;
+        }
+
+        seenLocations.add(key);
+        return true;
+      });
 
     cache.set(cacheKey, {
       time: Date.now(),
